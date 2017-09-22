@@ -68,7 +68,7 @@ ul.project-list li#project-two {
 
 ul.project-list li#project-three {	
 	animation-name: slide-three;
-  	animation-duration: 2	s;
+  	animation-duration: 2s;
 	animation-delay: 1.5s;
 	/*animation-timing-function: cubic-bezier(.02,.86,.97,.43);*/
 	animation-timing-function: linear;
