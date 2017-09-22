@@ -1,0 +1,85 @@
+body {
+	background: #f5f5f5;
+	font-family: 'Playfair Display SC', serif;
+	font-size: 16px;
+	overflow: hidden;
+}
+
+#container {	
+	width: 100%;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 7em;
+	font-weight: 300;
+	color: #78866b;
+	text-align: center;
+	letter-spacing: .5px;
+}
+
+
+#project-one {position: absolute; top: 300px; left: -100px;}
+#project-two {position: absolute; top: 350px; left: 2000px;}
+#project-three {position: absolute; top: 400px; left: -100px;}
+
+
+ul.project-list li#project-one {	
+	animation-name: slide-one;
+  	animation-duration: 5s;
+	animation-delay: 1s;
+	/*animation-timing-function: cubic-bezier(.02,.86,.97,.43);*/
+	animation-timing-function: linear;
+/*	animation-iteration-count: 2;*/
+  	animation-fill-mode: forwards;
+	animation-direction: alternate;
+}
+
+
+@keyframes slide-one {
+  	0% {transform: translateX(0);}
+	60% {transform: translateX(200px);}
+  	100% {transform: translateX(750px);} 
+}
+
+
+ul.project-list li#project-two {
+	width: 100%;	
+	animation-name: slide-two;
+  	animation-duration: 5s;
+	animation-delay: 1s;
+	/*animation-timing-function: cubic-bezier(.02,.86,.97,.43);*/
+	animation-timing-function: linear;
+/*	animation-iteration-count: 2;*/
+  	animation-fill-mode: forwards;
+	animation-direction: alternate;
+}
+
+
+@keyframes slide-two {
+  	0% {transform: translateX(0);}
+	60% {transform: translateX(-750px);}
+  	100% {transform: translateX(-1200px);} 
+}
+
+ul.project-list li#project-three {	
+	animation-name: slide-three;
+  	animation-duration: 6s;
+	animation-delay: 1.5s;
+	/*animation-timing-function: cubic-bezier(.02,.86,.97,.43);*/
+	animation-timing-function: linear;
+/*	animation-iteration-count: 2;*/
+  	animation-fill-mode: forwards;
+	animation-direction: alternate;
+}
+
+
+@keyframes slide-three {
+  	0% {transform: translateX(0);}
+	60% {transform: translateX(200px);}
+  	100% {transform: translateX(600px);} 
+}
+
+/*#project-one {position: absolute; top: 300px; left: 650px;}
+#project-two {position: absolute; top: 350px; left: 500px;}
+#project-three {position: absolute; top: 400px; left: 600px;}*/
