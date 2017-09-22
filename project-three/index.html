@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+	<style>
+	html {height:100%;}
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+	#derby {
+	float: left;
+	margin: 0 0 0 17%;
+	font-family: 'Oswald', sans-serif;
+	font-size: 200px;
+	}
+
+	#winner {
+		margin-left: 2000px; 
+		height: 200px;width:200px;font-size: 250px;
+	}
+
+
+	#winner.horizTranslate {
+		transition: 5s;
+		margin-left: 33% !important;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="cf">
+	<div id="derby" class="clearfix"></div>
+	<div id="winner" class="clearfix"></div>
+	<script src="derby.js"></script>
+	</div>
+</body>
+</html>

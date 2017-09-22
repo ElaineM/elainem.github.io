@@ -5,6 +5,9 @@ body {
 	overflow: hidden;
 }
 
+a {color: black; text-decoration: none;}
+a:hover {font-size: 24px;}
+
 #container {	
 	width: 100%;
 	margin: 0 auto;
@@ -19,14 +22,15 @@ h1 {
 }
 
 
-#project-one {position: absolute; top: 300px; left: -100px;}
-#project-two {position: absolute; top: 350px; left: 2000px;}
-#project-three {position: absolute; top: 400px; left: -100px;}
+#project-one {position: absolute; top: 300px; left: -100px; width: 100%;}
+#project-two {position: absolute; top: 350px; left: 2000px; width: 100%;}
+#project-three {position: absolute; top: 400px; left: -100px; width: 100%;}
+
 
 
 ul.project-list li#project-one {	
 	animation-name: slide-one;
-  	animation-duration: 5s;
+  	animation-duration: 1s;
 	animation-delay: 1s;
 	/*animation-timing-function: cubic-bezier(.02,.86,.97,.43);*/
 	animation-timing-function: linear;
@@ -46,7 +50,7 @@ ul.project-list li#project-one {
 ul.project-list li#project-two {
 	width: 100%;	
 	animation-name: slide-two;
-  	animation-duration: 5s;
+  	animation-duration: 1.5s;
 	animation-delay: 1s;
 	/*animation-timing-function: cubic-bezier(.02,.86,.97,.43);*/
 	animation-timing-function: linear;
@@ -64,7 +68,7 @@ ul.project-list li#project-two {
 
 ul.project-list li#project-three {	
 	animation-name: slide-three;
-  	animation-duration: 6s;
+  	animation-duration: 2	s;
 	animation-delay: 1.5s;
 	/*animation-timing-function: cubic-bezier(.02,.86,.97,.43);*/
 	animation-timing-function: linear;
