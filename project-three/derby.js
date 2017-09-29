@@ -10,64 +10,46 @@ setTimeout(function(){
 
 
 
-
-setTimeout(function(){
+setTimeout(function(){ 
 var raceTimer = 0;
-console.log("🐎🐎🐎🐎");
-console.log("🐎 🐎 🐎 🐎");
-console.log("🐎  🐎  🐎  🐎")
-  
-for (var i = 0; i < 10; i++) {
-	setTimeout(function(derbyRace){
+
+		var  sp = ' ',
+			horseOne = "http://elainematthias.com/img/js-img/horse-one-sm.jpg" + sp,
+		 	horseTwo = "http://elainematthias.com/img/js-img/horse-two-sm.jpg" + sp,
+			horseThree = "http://elainematthias.com/img/js-img/horse-three-sm.jpg" + sp,
+			horses = [horseOne,horseTwo, horseThree],
+			nl = '\n',
+			result = '';
+			console.image(horseOne, horseTwo, horseThree);
+
+		// select a random position within the arra
+	setTimeout(function(derbyRace){ 
 
 		var pony = "";
 		for (var s = 0; s< 10; s++){
 			var derby = Math.random()*100;
 			if (derby < 43) {
-				pony += "🐎";
+				pony += horseOne;
 			} else if (derby > 43 && derby < 53) {
-				pony += " "; //1 space
-			} else if (derby > 54 && derby < 66) {
-				pony += "  "; //2 spaces
+				pony += horseTwo
 			} else {
-				pony += "   "; //3 spaces
+				pony += horseThree
 			} 
-			} 
-			// return pony
-			// close for loop
-			console.log(pony);
-			// var watch = derbyRace
-			// document.getElementById(derby).innerHTML = "<h1>" + watch + "</h1>";
+			console.image(pony)+console.log(sp);
+		
+		} //close for loop
+	}, raceTimer);	
+	raceTimer += 200; //close setTimeout
+ 
+}, 3500);  // close launchAnimation
 
-		}, raceTimer); //close setTimeout
-	raceTimer += 150;
-} //close for loop
-  
-  
-}, 4000);
-
-setTimeout(function(){
-	document.getElementById("derby").innerHTML = "🥇"
-}, 5000);
+// setTimeout(function(){
+// 	document.getElementById("derby").innerHTML = "🥇"
+// }, 7000);
 
 
-setTimeout(function(){
-	var winner = document.getElementById("winner");
-	winner.innerHTML =  "🐎";
-	winner.classList.add("horizTranslate");
-	console.log(winner);
-}, 6000);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// setTimeout(function(){
+// 	var winner = document.getElementById("winner");
+// 	winner.innerHTML =  "🐎";
+// 	winner.classList.add("horizTranslate");
+// }, 8000);

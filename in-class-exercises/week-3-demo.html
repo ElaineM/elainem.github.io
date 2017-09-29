@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript is fun</title>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style type="text/css">
+  
+
+  .wrapper{
+
+    display: block;
+    position: relative;
+    width: 40vw;
+    margin: 0 auto;
+    padding-top: 200px;
+  }
+
+  .myDiv{
+    display: block;
+    width: 100px;
+  }
+
+</style>
+
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="myDiv">some content</div>
+    <div class="myDiv">more content</div>
+    <div class="myDiv">further content</div>
+    <div class="myDiv">just content</div>
+    <div class="myDiv">greater content</div>
+    <div class="myDiv">the best content</div>
+    <div class="myDiv">greater content</div>
+    <div class="myDiv">huge content</div>
+
+</div>
+
+
+<script type="text/javascript">
+
+  
+
+    var opacity = 0,
+        degrees = 0;
+
+    $(".myDiv").each(function() {
+      opacity += .1;
+      degrees += 30;
+       $(this).css({"opacity" : opacity,
+                    "transform" : "rotate(" + degrees + "deg)"});
+    });
+
+
+
+	
+</script>
+
+
+</body>
+</html>
