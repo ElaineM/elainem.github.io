@@ -1,47 +1,67 @@
-setTimeout(function(){
+
+
+
+
+function startRace(){
+	var btnvalue = $(this.target).val();
+
+	setTimeout(function(){
 	document.getElementById("derby").innerHTML = "READY"
-}, 1000);
+}, 0);
 setTimeout(function(){
 	document.getElementById("derby").innerHTML = "SET"
-}, 2000);
+}, 1000);
 setTimeout(function(){
 	document.getElementById("derby").innerHTML = "GO!"
-}, 3000);
+}, 2000);
 
-
-
-setTimeout(function(){ 
-var raceTimer = 0;
-
-		var  sp = ' ',
-			horseOne = "http://elainematthias.com/img/js-img/horse-one-sm.jpg" + sp,
-		 	horseTwo = "http://elainematthias.com/img/js-img/horse-two-sm.jpg" + sp,
-			horseThree = "http://elainematthias.com/img/js-img/horse-three-sm.jpg" + sp,
-			horses = [horseOne,horseTwo, horseThree],
-			nl = '\n',
-			result = '';
-			console.image(horseOne, horseTwo, horseThree);
-
-		// select a random position within the arra
-	setTimeout(function(derbyRace){ 
-
-		var pony = "";
-		for (var s = 0; s< 10; s++){
-			var derby = Math.random()*100;
-			if (derby < 43) {
-				pony += horseOne;
-			} else if (derby > 43 && derby < 53) {
-				pony += horseTwo
-			} else {
-				pony += horseThree
-			} 
-			console.image(pony)+console.log(sp);
 		
-		} //close for loop
-	}, raceTimer);	
-	raceTimer += 200; //close setTimeout
- 
-}, 3500);  // close launchAnimation
+
+	var horseTimer = 4000;
+
+	for (var i = 0; i < 50; i++){
+
+		setTimeout(function(){
+
+			var running = "";
+			var horse = "";
+			var style = "font-size: 25px;";
+
+			for (var a = 0; a < 100; a++) {
+
+				var horse = Math.random()*1;
+
+				if (horse < 0.33) {
+					running += " 🐎";
+				}
+				else if (horse > 0.33 && horse < 0.66) {
+					running += " 🏇🏻 ";
+				} 
+				else {
+					running += " 🏇🏿 ";
+				}
+			}
+			console.log('%c' + running, style);
+
+		}, horseTimer);
+		horseTimer += 100;
+	}
+
+		for (var a = 0; a < 2; a++) {
+			setTimeout(function(){
+			var winner = Math.random(1,2);
+
+			if (winner === 1) {
+			document.getElementById("derby").innerHTML = "Your Horse Won!"
+			} else {
+			document.getElementById("derby").innerHTML = "Your Horse lost!"
+			}
+		}, 10000);
+
+};
+};
+
+
 
 // setTimeout(function(){
 // 	document.getElementById("derby").innerHTML = "🥇"

@@ -4,54 +4,25 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
 
-	<style>
-	html {height:100%;}
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.cf:after {
-    clear: both;
-}
-
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.cf {
-    *zoom: 1;
-}
-	#derby {
-	float: left;
-	position: absolute;
-	top: 0;
-	margin: 0 0 0 17%;
-	font-family: 'Oswald', sans-serif;
-	font-size: 200px;
-	}
-
-	#winner {
-		margin-left: 2000px; 
-		height: 200px;width:200px;font-size: 250px;
-	}
-
-
-	#winner.horizTranslate {
-		transition: 5s;
-		margin-left: 33% !important;
-	}
-
-	</style>
 </head>
 <body>
+
+	<div id="derby">
+		<h1>Welcome to the Derby</h1>
+		<h2><span>Step 1:</span> Open console (command + option + j)</h2>
+		<h2><span>Step 2:</span> Select your horse<br>
+		<button type="button" id="horseOne" onclick="startRace()" value="1">🏇🏿</button>
+		<button type="button" id="horseTwo" onclick="startRace()" value="2">🐎</button></h2>
+	</div>
+
 	<div class="cf">
-	<div id="derby" class="clearfix"></div>
 	<div id="winner" class="clearfix"></div>
-	<script src="console.image.js"></script>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="derby.js"></script>
+
 	</div>
 </body>
 </html>
