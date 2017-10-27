@@ -1,121 +1,143 @@
+var myArray = [];
+var option = 1;
+
+function rightShape(x,y) {
+	beginShape();
+	strokeWeight(20);
+	vertex(180+x,0+y);
+	vertex(180+x,20+y);
+	vertex(160+x,20+y);
+	vertex(160+x,40+y);
+	vertex(140+x,40+y);
+	vertex(140+x,60+y);
+	vertex(120+x,60+y);
+	vertex(120+x,80+y);
+	vertex(100+x,80+y);
+	vertex(100+x,100+y);
+	vertex(80+x,100+y);
+	vertex(80+x,120+y);
+	vertex(60+x,120+y);
+	vertex(60+x,140+y);
+	vertex(40+x,140+y);
+	vertex(40+x,160+y);
+	vertex(20+x,160+y);
+	vertex(20+x,180+y);
+	vertex(0+x,180+y);
+	vertex(0+x,200+y);
+	endShape();
+	}
+
+function leftShape(x,y) {
+	beginShape();
+	strokeWeight(20);
+	vertex(0+x,20+y);
+	vertex(20+x,20+y);
+	vertex(20+x,40+y);
+	vertex(40+x,40+y);
+	vertex(40+x,60+y);
+	vertex(60+x,60+y);
+	vertex(60+x,80+y);
+	vertex(80+x,80+y);
+	vertex(80+x,100+y);
+	vertex(100+x,100+y);
+	vertex(100+x,120+y);
+	vertex(120+x,120+y);
+	vertex(120+x,140+y);
+	vertex(140+x,140+y);
+	vertex(140+x,160+y);
+	vertex(160+x,160+y);
+	vertex(160+x,180+y);
+	vertex(180+x,180+y);
+	vertex(180+x,200+y);
+	vertex(200+x,200+y);
+	endShape();
+	}
+
 function setup() {
-	createCanvas(600,600);
+	createCanvas(windowWidth, windowHeight);
+	// console.log(myArray);
 }
+
+function draw(){
+	
+		if (option == 1) {
+			if (keyCode == UP_ARROW) {
+				leftShape(100,100);
+				console.log("1");
+			
+			} else if (keyCode == DOWN_ARROW) {
+				rightShape(300,100);
+				console.log("2")
+		
+			} 
+		} else if (option == 2) {
+			if (keyCode == UP_ARROW) {
+				leftShape(200,200);
+			
+			} else if (keyCode == DOWN_ARROW) {
+				rightShape(600,200);
+		
+			} 
+		} else if (option == 3) {
+			if (keyCode == UP_ARROW) {
+				leftShape(300,300);
+			
+			} else if (keyCode == DOWN_ARROW) {
+				rightShape(900,300);
+			
+			} 
+		}
+
+		function mousePressed() {
+			option++;
+			console.log(option);
+		}
+	// }
+}
+	
+// function drawCircles(x,y){
+// 	ellipse(x,y-25,10,10);
+// 	// ellipse(x,y,10,10);
+// 	// ellipse(x,y+25,10,10);
+// }
+
+// function setup() {
+// 	createCanvas(windowWidth, windowHeight);
+// }
 
 // function draw() {
-// 	function onLoad() {
-// 		var randNum = Math.floor(Math.range(1,2));
-// 		if (randNum == 1) {
-// 			//left path
-// 		} else (randNum == 2) {
-// 			//right path
-// 		}
-// 	} //close onLoad
+// 	drawCircles(100,100);
+// 	drawCircles(200,100);
+// 	drawCircles(300,100);
 
-// 	function mousePressed() {
-// 		function location () {
+// if (keyCode == UP_ARROW) {
+// 	a = 100;
+// 	b = 100;
+// 	drawCircles(100+a,100+b);
+// 	} else if (keyCode == DOWN_ARROW){
+// 		a = 150;
+// 		b = 150;
+// 		drawCircles(100+a,100+b);
+// 	}
+// }
 
-// 		}
-//  		if (keyPressed == 1) {
-// 			if (existingPiece == leftPath) {
-// 				print rightPath
-// 			} else if {
-// 				print leftPath
-// 			}
-// 		} else if (keyPressed == 2) {
-// 			if (existingPiece == leftPath) {
-// 				print rightPath
-// 			} else if {
-// 				print leftPath
-// 			}
-// 		} else {
-// 			error message 
-// 		}
+// function draw() {
+// 	backgroun(255);
+// 	Arrow()
+// 	for (var i=Arrow; i<500;i+=5); {		
 // 	}
 
+// 	function Arrow() {
+// 		beginShape();
+// 		vertex(180,82);
+// 		vertex(207,36);
+// 		vertex(214,63);
+// 		vertex(407,11);
+// 		vertex(412,30);
+// 		vertex(219,82);
+// 		vertex(223,109);
+// 		endShape(CLOSE);
+// 	}
 
+// }
 
-
-
-function draw() {
-
-
-//left side
-beginShape();
-var x = 200;
-var y = 0;
-strokeWeight(20);
-vertex(0+x,20+y);
-vertex(20+x,20+y);
-vertex(20+x,40+y);
-vertex(40+x,40+y);
-vertex(40+x,60+y);
-vertex(60+x,60+y);
-vertex(60+x,80+y);
-vertex(80+x,80+y);
-vertex(80+x,100+y);
-vertex(100+x,100+y);
-vertex(100+x,120+y);
-vertex(120+x,120+y);
-vertex(120+x,140+y);
-vertex(140+x,140+y);
-vertex(140+x,160+y);
-vertex(160+x,160+y);
-vertex(160+x,180+y);
-vertex(180+x,180+y);
-vertex(180+x,200+y);
-vertex(200+x,200+y);
-endShape();
-
-//right side
-beginShape();
-strokeWeight(20);
-vertex(180,0);
-vertex(180,20);
-vertex(160,20);
-vertex(160,40);
-vertex(140,40);
-vertex(140,60);
-vertex(120,60);
-vertex(120,80);
-vertex(100,80);
-vertex(100,100);
-vertex(80,100);
-vertex(80,120);
-vertex(60,120);
-vertex(60,140);
-vertex(40,140);
-vertex(40,160);
-vertex(20,160);
-vertex(20,180);
-vertex(0,180);
-vertex(0, 200);
-endShape();
-
-beginShape();
-var x = 0;
-var y = 200;
-strokeWeight(20);
-vertex(0+x,20+y);
-vertex(20+x,20+y);
-vertex(20+x,40+y);
-vertex(40+x,40+y);
-vertex(40+x,60+y);
-vertex(60+x,60+y);
-vertex(60+x,80+y);
-vertex(80+x,80+y);
-vertex(80+x,100+y);
-vertex(100+x,100+y);
-vertex(100+x,120+y);
-vertex(120+x,120+y);
-vertex(120+x,140+y);
-vertex(140+x,140+y);
-vertex(140+x,160+y);
-vertex(160+x,160+y);
-vertex(160+x,180+y);
-vertex(180+x,180+y);
-vertex(180+x,200+y);
-vertex(200+x,200+y);
-endShape();
-
-}
