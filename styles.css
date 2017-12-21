@@ -14,12 +14,13 @@ a:hover {font-size: 24px;}
 }
 
 h1 {
+	font-family: 'Archivo Black', sans-serif;
 	font-size: 7em;
 	font-weight: 300;
 	color: #78866b;
 	text-align: center;
 	letter-spacing: .5px;
-	font-family: 'Archivo Black', sans-serif;
+	
 }
 
 
